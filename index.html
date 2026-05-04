@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .img img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .container .btn{
+            margin-top: 20px;
+            padding: 5px 10px;
+            font-size: 20px;
+            background: green;
+            color: wheat;
+            box-shadow: 0 0 40px black;
+        }
+        .text{
+            display: none;
+            position: fixed;
+            left: 10%;
+            right: 10%;
+            font-size: 23px;
+            max-width: 100%;
+            overflow: scroll;
+            padding: 10px 20px;
+            height: 250px;
+            background: white;
+            box-shadow: 0 0 40px black;
+        }
+        .show{
+            display: block;
+        }
+        .close{
+            background: radial-gradient(lime,red);
+            cursor: pointer ;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="img">
+    <button class="btn">click me</button>
+        <img src="/IMG_20240517_061817.jpg" alt="">      
+    </div>      
+</div>
+    <div class="text">
+        <h1>welcome to the my company</h1>
+        <p class="text1">
+             adipisicing elit. Accusantium animi deleniti ex 
+             officiis in. Magni deleniti beatae, excepturi 
+             minus fuga rem voluptas odio exercitationem 
+             voluptates officia quibusdam ea mollitia aliquid!
+        </p>
+        <h3 class="h3">this is my page</h3>
+        <button class="close">close</button>
+    </div>
+    </div>
+<script>
+  
+  const text = document.querySelector('.text');
+  const close = document.querySelector('.close');
+  const btn = document.querySelector('.btn');
+  btn.addEventListener('click',()=>{
+    text.classList.add('show');
+  })
+   close.addEventListener('click',()=>{
+    text.classList.remove('show');
+  })
+
+</script>
+</body>
+</html>
